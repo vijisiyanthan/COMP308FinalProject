@@ -1,0 +1,19 @@
+{
+  "name": "comp308finalproject",
+  "version": "1.0.0",
+  "description": "COMP308-Final Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vijisiyanthan/COMP308FinalProject.git"
+  },
+  "author": "Siyanthan Vijithamparanathan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vijisiyanthan/COMP308FinalProject/issues"
+  },
+  "homepage": "https://github.com/vijisiyanthan/COMP308FinalProject#readme"
+}
