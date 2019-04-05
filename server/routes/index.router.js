@@ -9,13 +9,16 @@ const auth = require('../config/auth')
 //User Routes
 router.post('/register', ctrlUser.register)
 router.post('/authenticate', ctrlUser.authenticate)
-//Get Patients
+//Patient Routes
 router.get('/patients', auth.verifyJwtToken, ctrlUser.getPatients)
-//Clinic Vist Routes
+//Clinical Vist Routes
 router.post('/clinic', auth.verifyJwtToken, ctrlClinic.create)
 router.get('/clinic', auth.verifyJwtToken, ctrlClinic.list)
 router.get('/clinic/:id', auth.verifyJwtToken, ctrlClinic.getClinicbyId)
 router.post('/clinic/:id', auth.verifyJwtToken, ctrlClinic.updateClinic)
 router.delete('/clinic/:id', auth.verifyJwtToken, ctrlClinic.deleteClinic)
+
+//Daily Info Routes
+
 
 module.exports = router;
