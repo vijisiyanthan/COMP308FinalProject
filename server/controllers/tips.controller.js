@@ -27,7 +27,17 @@ exports.list = function (req, res) {
 
     });
 };
-
+exports.listbyId = function (req, res) {
+    Tips.find({
+        'patient': req._id
+    }, (err, docs) => {
+        if (!err) {
+            res.send(docs)
+        } else {
+            console.log('Error in Retrieving Tips:' + JSON.stringify(err, undefined, 2))
+        }
+    })
+}
 exports.getTipsbyId = function (req, res) {
     if (!ObjectId.isValid(req.params.id))
         return res.status(400).send(`No Tips with given id: ${req.params.id}`)
