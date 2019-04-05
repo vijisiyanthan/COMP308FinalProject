@@ -1,7 +1,7 @@
 # COMP308FinalProject
 
-<table>
-<td>Project Specifications</td>
+<body>
+Project Specifications
 Your client needs an application to help nurse practitioners to monitor patients during the first weeks of their
 release from hospital and also helps the patients to monitor their daily activities. Develop a responsive app that
 implements the following functionalities:
@@ -20,4 +20,4 @@ c. Allow user to enter daily information as specified by the doctor/nurse practi
 d. Allow user to use a checklist of common signs and symptoms, to generate a list of possible
 medical conditions and advice on when to consult a health care provider.
 Use MongoDB for storing the information. 
-</table>
+</body>
