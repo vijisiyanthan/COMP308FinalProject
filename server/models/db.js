@@ -9,3 +9,6 @@ mongoose.connect(process.env.MONGODB_URI, (err) => {
 });
 
 require('./user.model')
+require('./dailyInfo.model')
+require('./tips.model')
+require('./clinicVisit.model')
