@@ -5,7 +5,7 @@ const ClinicSchema = new mongoose.Schema({
         type: Number,
         required: 'Patient Body Temperature is required'
     },
-    hearRate: {
+    heartRate: {
         type: Number
     },
     bloodPressure: {
