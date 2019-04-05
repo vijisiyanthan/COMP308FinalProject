@@ -1,4 +1,4 @@
 module.exports = {
-    nurse,
-    patient,
+    nurse: ["/patients"],
+    patient: ["/"],
 }

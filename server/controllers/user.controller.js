@@ -38,7 +38,7 @@ module.exports.authenticate = (req, res, next) => {
 module.exports.getPatients = function (req, res) {
     User.find({
         'role': 'patient'
-    }, '_id userName', (err, docs) => {
+    }, '_id userName firstName lastName', (err, docs) => {
         if (!err) {
             res.send(docs);
         } else {

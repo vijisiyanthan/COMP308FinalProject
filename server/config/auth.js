@@ -12,6 +12,7 @@ module.exports.verifyJwtToken = (req, res, next) => {
         });
     else {
         jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+            console.log(req.url)
             if (err)
                 return res.status(500).send({
                     auth: false,
@@ -19,7 +20,7 @@ module.exports.verifyJwtToken = (req, res, next) => {
                 });
             else {
                 if (role[decoded.role].find(function (url) {
-                        return url == req.baseUrl
+                        return url == req.url
                     })) {
                     req._id = decoded._id;
                     next()
