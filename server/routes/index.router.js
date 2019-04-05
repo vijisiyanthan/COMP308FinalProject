@@ -6,6 +6,7 @@ const ctrlUser = require('../controllers/user.controller')
 
 router.post('/register', ctrlUser.register)
 router.post('/authenticate', ctrlUser.authenticate)
+router.get('/patients', ctrlUser.getPatients)
 
 
 

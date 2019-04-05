@@ -34,3 +34,15 @@ module.exports.authenticate = (req, res, next) => {
         else return res.status(404).json(info);
     })(req, res);
 }
+
+module.exports.getPatients = function (req, res) {
+    User.find({
+        'role': 'patient'
+    }, '_id userName', (err, docs) => {
+        if (!err) {
+            res.send(docs);
+        } else {
+            console.log('Error in Retriving Patients :' + JSON.stringify(err, undefined, 2));
+        }
+    })
+}
