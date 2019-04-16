@@ -6,10 +6,14 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const passport = require('passport');
-
+const path = require('path');
 const rtsIndex = require('./routes/index.router');
 
 var app = express();
+
+
+//
+app.use(express.static(path.join(__dirname, '../public')));
 
 //middleware
 app.use(bodyParser.json());
