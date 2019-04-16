@@ -1,7 +1,7 @@
 # COMP308FinalProject
 
 <body>
-# Project Specifications
+Project Specifications
 Your client needs an application to help nurse practitioners to monitor patients during the first weeks of their
 release from hospital and also helps the patients to monitor their daily activities. Develop a responsive app that
 implements the following functionalities:
