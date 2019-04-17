@@ -8,10 +8,10 @@
           <div class="col-md-offsetr-3 col-md-12">
             <table class="table table-bordered table-striped table-hover">
               <tr>
-                <th class="text-center">Course Code</th>
-                <th class="text-center">Course Name</th>
-                <th class="text-center">Section</th>
-                <th class="text-center">Semester</th>
+                <th class="text-center">Body Temperature</th>
+                <th class="text-center">Heart Rate</th>
+                <th class="text-center">Blood Pressure</th>
+                <th class="text-center">Respiratory Rate</th>
                 <th class="text-center"></th>
                 <th class="text-center"></th>
               </tr>
@@ -21,7 +21,7 @@
                 <td class="text-center"></td>
                 <td class="text-center"></td>
                 <td class="text-center">
-                  <a href="/courses/edit/" class="btn btn-primary"><i class="fas fa-pencil-alt"></i> Edit</a>
+                  <a href="/courses/edit/" class="btn btn-info"><i class="fas fa-pencil-alt"></i> Edit</a>
                 </td>
                 <td class="text-center">
                   <a href="/courses/delete/" class="btn btn-danger"><i class="fas fa-pencil-alt"></i> Delete</a>
@@ -37,30 +37,30 @@
 
             <!-- Form container -->
             <form method="POST">
-              <p class="h4 text-center mb-4">Courses</p>
+              <p class="h4 text-center mb-4">Patient's Info</p>
               <div class="md-form">
                 <i class="fa fa-user prefix grey-text"></i>
-                <label for="materialFormRegisterNameEx">Course Code</label>
+                <label for="materialFormRegisterNameEx">Body Temperature</label>
                 <input type="text" id="materialFormRegisterNameEx" name="courseCode" class="form-control">
               </div>
               <div class="md-form">
                 <i class="fa fa-envelope prefix grey-text"></i>
-                <label for="materialFormRegisterEmailEx">Course Name</label>
+                <label for="materialFormRegisterEmailEx">Heart Rate</label>
                 <input type="text" id="materialFormRegisterEmailEx" name="courseName" class="form-control">
 
               </div>
               <div class="md-form">
                 <i class="fa fa-exclamation-triangle prefix grey-text"></i>
-                <label for="materialFormRegisterConfirmEx">Section</label>
+                <label for="materialFormRegisterConfirmEx">Blood Pressure</label>
                 <input type="text" id="materialFormRegisterConfirmEx" name="section" class="form-control">
               </div>
               <div class="md-form">
                 <i class="fa fa-lock prefix grey-text"></i>
-                <label for="materialFormRegisterPasswordEx">Semester</label>
+                <label for="materialFormRegisterPasswordEx">Respiratory Rate</label>
                 <input type="text" id="materialFormRegisterPasswordEx" name="semester" class="form-control">
               </div>
               <div class="text-center mt-4">
-                <input id="btn_login" type="submit" class="login" value="Add">
+                <input type="submit" class="login" value="Add">
               </div>
             </form>
           </div>

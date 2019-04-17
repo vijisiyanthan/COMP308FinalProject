@@ -12,7 +12,7 @@ const rtsIndex = require('./routes/index.router');
 var app = express();
 
 
-//
+//static files
 app.use(express.static(path.join(__dirname, '../public')));
 
 //middleware

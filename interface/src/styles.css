@@ -128,7 +128,6 @@ div.form-item p.formLabel {
 }
 
 input[type="submit"].login {
-  float: right;
   width: 112px;
   height: 37px;
   -moz-border-radius: 19px;
@@ -144,9 +143,6 @@ input[type="submit"].login {
   font-weight: bold;
 }
 
-#btn_login {
-  margin-right: 90px;
-}
 
 input[type="submit"].login:hover {
   background-color: #fff;
