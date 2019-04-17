@@ -1,0 +1,71 @@
+<div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+  <div class="container">
+    <div class="row wow fadeIn">
+      <div class="col-md-6 mb-4 white-text text-center text-md-left">
+        <h2 class="display-4 font-weight-bold">Welcome to {{ title }}</h2>
+        <hr class="hr-light">
+        <div class="row">
+          <div class="col-md-offsetr-3 col-md-12">
+            <table class="table table-bordered table-striped table-hover">
+              <tr>
+                <th class="text-center">Body Temperature</th>
+                <th class="text-center">Heart Rate</th>
+                <th class="text-center">Blood Pressure</th>
+                <th class="text-center">Respiratory Rate</th>
+                <th class="text-center"></th>
+                <th class="text-center"></th>
+              </tr>
+              <tr>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center">
+                  <a href="/courses/edit/" class="btn btn-info"><i class="fas fa-pencil-alt"></i> Edit</a>
+                </td>
+                <td class="text-center">
+                  <a href="/courses/delete/" class="btn btn-danger"><i class="fas fa-pencil-alt"></i> Delete</a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-xl-5 mb-4">
+        <div class="card">
+          <div class="card-body">
+
+            <!-- Form container -->
+            <form method="POST">
+              <p class="h4 text-center mb-4">Patient's Info</p>
+              <div class="md-form">
+                <i class="fa fa-user prefix grey-text"></i>
+                <label for="materialFormRegisterNameEx">Body Temperature</label>
+                <input type="text" id="materialFormRegisterNameEx" name="courseCode" class="form-control">
+              </div>
+              <div class="md-form">
+                <i class="fa fa-envelope prefix grey-text"></i>
+                <label for="materialFormRegisterEmailEx">Heart Rate</label>
+                <input type="text" id="materialFormRegisterEmailEx" name="courseName" class="form-control">
+
+              </div>
+              <div class="md-form">
+                <i class="fa fa-exclamation-triangle prefix grey-text"></i>
+                <label for="materialFormRegisterConfirmEx">Blood Pressure</label>
+                <input type="text" id="materialFormRegisterConfirmEx" name="section" class="form-control">
+              </div>
+              <div class="md-form">
+                <i class="fa fa-lock prefix grey-text"></i>
+                <label for="materialFormRegisterPasswordEx">Respiratory Rate</label>
+                <input type="text" id="materialFormRegisterPasswordEx" name="semester" class="form-control">
+              </div>
+              <div class="text-center mt-4">
+                <input type="submit" class="login" value="Add">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
