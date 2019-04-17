@@ -14,6 +14,12 @@ var app = express();
 
 //static files
 app.use(express.static(path.join(__dirname, '../public')));
+//
+app.get('*', (req, res) => {
+    res.sendfile(path.join(__dirname, '../public/index.html'));
+});
+
+
 
 //middleware
 app.use(bodyParser.json());

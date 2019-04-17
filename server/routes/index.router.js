@@ -47,5 +47,4 @@ router.get('/patient/tips', auth.verifyJwtToken, ctrlTips.listbyId)
 router.get('/patient/tips/:id', auth.verifyJwtToken, ctrlTips.getTipsbyId)
 
 
-
 module.exports = router;
