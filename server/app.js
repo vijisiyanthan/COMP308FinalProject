@@ -15,11 +15,9 @@ var app = express();
 //static files
 app.use(express.static(path.join(__dirname, '../public')));
 //
-app.get('*', (req, res) => {
-    res.sendfile(path.join(__dirname, '../public/index.html'));
-});
-
-
+//app.get('*', (req, res) => {
+    ////res.sendfile(path.join(__dirname, '../public/index.html'));
+//});
 
 //middleware
 app.use(bodyParser.json());
@@ -27,8 +25,9 @@ app.use(cors());
 app.use(passport.initialize());
 app.use('/api', rtsIndex);
 
-//error handler
 
+
+//error handler
 app.use((err, req, res, next) => {
     if (err.name === 'ValidationError') {
         var valErrors = [];
