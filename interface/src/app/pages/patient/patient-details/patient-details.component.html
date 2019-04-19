@@ -1,0 +1,40 @@
+<div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+  <div class="container">
+    <div class="row wow fadeIn">
+      <div class="col-md-9 mb-4 white-text text-center text-md-left">
+        <h2 class="display-4 font-weight-bold">Patient's Details</h2>
+        <hr class="hr-light">
+
+<a class="btn btn-primary" routerLink="/patient-clinic-update" role="button">
+  <i class="fas fa-plus-circle"></i>Add record
+</a>
+        <div class="row">
+          <div class="col-md-offsetr-3 col-md-12">
+            <table class="table table-bordered table-striped table-hover">
+              <tr>
+                <th class="text-center">Record Id</th>
+                <th class="text-center">Record Time</th>
+                <th class="text-center">Body Temperature</th>
+                <th class="text-center">Assigned To</th>
+                <th class="text-center"></th>
+                <th class="text-center"></th>
+              </tr>
+              <tr *ngFor="let clinic of clinicDetails">
+                <td class="text-center">{{ clinic._id }}</td>
+                <td class="text-center">{{ clinic.recorded }}</td>
+                <td class="text-center">{{ clinic.bodyTemperature }}</td>
+                <td class="text-center">{{ clinic.nurse }}</td>
+                <td class="text-center">
+                  <a routerLink="/patient-clinic-update" class="btn btn-info"><i class="fas fa-pencil-alt"></i> Edit</a>
+                </td>
+                <td class="text-center">
+                  <a routerLink="/patient-clinic-list/{{ clinic._id }}"  class="btn btn-danger"><i class="fas fa-pencil-alt"></i> Delete</a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
