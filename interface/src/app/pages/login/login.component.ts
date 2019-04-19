@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
         if (this.role == "nurse") {
           this.router.navigateByUrl("/nurse");
         } else if (this.role == "patient") {
-          this.router.navigateByUrl("/patient");
+          this.router.navigateByUrl("/videos");
         }
       },
       err => {
