@@ -27,9 +27,16 @@ export class AuthGuard implements CanActivate {
       this.router.navigateByUrl("/login");
       this.userService.deleteToken();
       this.userService.getLoggedInStatus.emit("Inactive");
+      this.userService.getLoggedInRole.emit("User");
       return false;
+    } else {
+      if (route.data.expectedRole == "Nurse") {
+        this.userService.getLoggedInRole.emit("Nurse");
+      } else if (route.data.expectedRole == "Patient") {
+        this.userService.getLoggedInRole.emit("Patient");
+      }
+      this.userService.getLoggedInStatus.emit("Active");
+      return true;
     }
-    this.userService.getLoggedInStatus.emit("Active");
-    return true;
   }
 }

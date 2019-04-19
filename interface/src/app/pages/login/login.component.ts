@@ -29,8 +29,10 @@ export class LoginComponent implements OnInit {
         this.userService.getLoggedInStatus.emit("Active");
         this.role = this.userService.getUserPayload().role;
         if (this.role == "nurse") {
+          this.userService.getLoggedInRole.emit("Nurse");
           this.router.navigateByUrl("/nurse");
         } else if (this.role == "patient") {
+          this.userService.getLoggedInRole.emit("Patient");
           this.router.navigateByUrl("/videos");
         }
       },

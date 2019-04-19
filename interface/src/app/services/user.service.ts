@@ -11,6 +11,7 @@ import { User } from "../models/user";
 })
 export class UserService {
   public getLoggedInStatus: EventEmitter<any> = new EventEmitter();
+  public getLoggedInRole: EventEmitter<any> = new EventEmitter();
   private endpoint = "http://localhost:3000/api/nurse/patients";
 
   private httpOptions = {

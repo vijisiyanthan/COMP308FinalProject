@@ -10,17 +10,24 @@
         <a class="nav-link" routerLink="/"><i class="fas fa-lg fa-igloo"></i> Home
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/login"><i class="fa fa-lg fa-lock"></i> Login</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/nurse"><i class="fa fa-lg fa-phone"></i> Nurse (Test only)</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/patient-details"><i class="fa fa-lg fa-phone"></i> Patient (Test only)</a>
-      </li>
+      <ng-container *ngIf="userRole=='User'">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login"><i class="fa fa-lg fa-lock"></i> Login</a>
+        </li>
+      </ng-container>
+      <ng-container *ngIf="userRole=='Nurse'">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/nurse"><i class="fa fa-lg fa-phone"></i> Nurse (Test only)</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/nurse-tips"><i class="fa fa-lg fa-phone"></i> Nurse (Test only)</a>
+        </li>
+      </ng-container>
+      <ng-container *ngIf="userRole=='Patient'">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/videos"><i class="fa fa-lg fa-phone"></i> Motivational Videos</a>
+        </li>
+      </ng-container>
       <ng-container *ngIf="userStatus=='Inactive'">
         <li class="nav-item">
           <a class="nav-link" routerLink="/signup"><i class="fa fa-lg fa-id-badge"></i> Sign Up</a>
