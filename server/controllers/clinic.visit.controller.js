@@ -80,18 +80,17 @@ exports.deleteClinic = function (req, res) {
     });
 };
 
+
 //GetClinicByPatientId
 exports.getClinicbyPatientId = function (req, res) {
 
-    Clinic.find({
-        patient: req.params.id
-    }, function (err, data) {
-        if (err) {
+    Clinic.find({patient: req.params.id}, function(err, data){
+        if(err){
             console.log(err);
             return
         }
 
-        if (data.length == 0) {
+        if(data.length == 0) {
             console.log("No record found")
             return
         }

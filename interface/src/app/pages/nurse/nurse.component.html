@@ -21,52 +21,17 @@
                       <td class="text-center">{{ user.lastName }}</td>
                       <td class="text-center">{{ user.userName }}</td>
                       <td class="text-center">
-                        <a routerLink="/courses/edit/" class="btn btn-info"><i class="fas fa-pencil-alt"></i> View</a>
+                        <a routerLink="/patient-details/{{user._id}}" class="btn btn-info"><i class="fas fa-pencil-alt"></i> View</a>
                       </td>
                       <td class="text-center">
-                        <a routerLink="/courses/delete/" class="btn btn-danger"><i class="fas fa-pencil-alt"></i> Delete</a>
+                        <a routerLink="/patient-details/{{user._id}}" class="btn btn-danger"><i class="fas fa-pencil-alt"></i> Delete</a>
                       </td>
                     </tr>
                   </table>
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-xl-3 mb-4">
-          <div class="card">
-            <div class="card-body">
 
-              <!-- Form container -->
-              <form method="POST">
-                <p class="h4 text-center mb-4">Patient's Info</p>
-
-                <div class="md-form">
-                  <i class="fa fa-user prefix grey-text"></i>
-                  <label for="materialFormRegisterNameEx">Body Temperature</label>
-                  <input type="text" id="materialFormRegisterNameEx" name="courseCode" class="form-control">
-                </div>
-                <div class="md-form">
-                  <i class="fa fa-envelope prefix grey-text"></i>
-                  <label for="materialFormRegisterEmailEx">Heart Rate</label>
-                  <input type="text" id="materialFormRegisterEmailEx" name="courseName" class="form-control">
-
-                </div>
-                <div class="md-form">
-                  <i class="fa fa-exclamation-triangle prefix grey-text"></i>
-                  <label for="materialFormRegisterConfirmEx">Blood Pressure</label>
-                  <input type="text" id="materialFormRegisterConfirmEx" name="section" class="form-control">
-                </div>
-                <div class="md-form">
-                  <i class="fa fa-lock prefix grey-text"></i>
-                  <label for="materialFormRegisterPasswordEx">Respiratory Rate</label>
-                  <input type="text" id="materialFormRegisterPasswordEx" name="semester" class="form-control">
-                </div>
-                <div class="text-center mt-4">
-                  <input type="submit" class="login" value="Add">
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>

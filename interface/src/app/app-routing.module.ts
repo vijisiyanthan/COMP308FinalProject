@@ -26,12 +26,12 @@ const routes: Routes = [
     data: { title: "Videos", expectedRole: "patient" },
     canActivate: [AuthGuard]
   },
-  {
-    path: "patient",
-    component: PatientComponent,
-    data: { title: "Patient", expectedRole: "patient" },
-    canActivate: [AuthGuard]
-  },
+  { path: 'patient-clinic-list', component: PatientClinicListComponent },
+  { path: 'patient-clinic-list/:id', component: PatientClinicListComponent },
+  { path: 'patient-details', component: PatientDetailsComponent },
+  { path: 'patient-details/:_id', component: PatientDetailsComponent },
+  { path: 'patient-clinic-update', component: PatientClinicUpdateComponent },
+
   { path: "", redirectTo: "/home", pathMatch: "full" }
 ];
 

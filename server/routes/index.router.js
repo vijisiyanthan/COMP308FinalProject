@@ -31,6 +31,7 @@ router.get('/patient/daily', ctrlDailyInfo.listbyId)
 router.get('/patient/daily/:id', ctrlDailyInfo.getDailyInfobyId)
 router.post('/patient/daily/:id', ctrlDailyInfo.updateDailyInfo)
 router.delete('/patient/daily/:id', ctrlDailyInfo.deleteDailyInfo)
+
 //--Nurse Role
 router.get('/nurse/daily', ctrlDailyInfo.list)
 router.get('/nurse/daily/:id', ctrlDailyInfo.getDailyInfobyId)
@@ -43,6 +44,7 @@ router.get('/nurse/tips', ctrlTips.list)
 router.get('/nurse/tips/:id', ctrlTips.getTipsbyId)
 router.post('/nurse/tips/:id', ctrlTips.updateTips)
 router.delete('/nurse/tips/:id', ctrlTips.deleteTips)
+
 //-Patient Role
 router.get('/patient/tips', ctrlTips.listbyId)
 router.get('/patient/tips/:id', ctrlTips.getTipsbyId)
