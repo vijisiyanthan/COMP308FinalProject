@@ -31,27 +31,32 @@ const routes: Routes = [
   {
     path: "patient-clinic-list",
     component: PatientClinicListComponent,
-    data: { title: "Nurse Account", expectedRole: "nurse" }
+    data: { title: "Nurse Account", expectedRole: "nurse" },
+    canActivate: [AuthGuard]
   },
   {
     path: "patient-clinic-list/:id",
     component: PatientClinicListComponent,
-    data: { title: "Nurse Account", expectedRole: "nurse" }
+    data: { title: "Nurse Account", expectedRole: "nurse" },
+    canActivate: [AuthGuard]
   },
   {
     path: "patient-details",
     component: PatientDetailsComponent,
-    data: { title: "Nurse Account", expectedRole: "nurse" }
+    data: { title: "Nurse Account", expectedRole: "nurse" },
+    canActivate: [AuthGuard]
   },
   {
     path: "patient-details/:_id",
     component: PatientDetailsComponent,
-    data: { title: "Nurse Account", expectedRole: "nurse" }
+    data: { title: "Nurse Account", expectedRole: "nurse" },
+    canActivate: [AuthGuard]
   },
   {
     path: "patient-clinic-update",
     component: PatientClinicUpdateComponent,
-    data: { title: "Nurse Account", expectedRole: "nurse" }
+    data: { title: "Nurse Account", expectedRole: "nurse" },
+    canActivate: [AuthGuard]
   },
 
   { path: "", redirectTo: "/home", pathMatch: "full" }
