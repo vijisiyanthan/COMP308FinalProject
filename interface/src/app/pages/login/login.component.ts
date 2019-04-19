@@ -1,21 +1,43 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { NgForm } from "@angular/forms";
+
+import { UserService } from "src/app/services/user.service";
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: "app-login",
+  templateUrl: "./login.component.html",
+  styleUrls: ["./login.component.css"]
 })
 export class LoginComponent implements OnInit {
-  title: String;
+  role: String;
+  serverErrorMessages: string;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private userService: UserService, private router: Router) {}
 
-  ngOnInit() {
-    this.title = this.route.snapshot.data.title;
+  model = {
+    userName: "",
+    password: ""
+  };
 
+  ngOnInit() {}
+
+  onSubmit(form: NgForm) {
+    this.userService.login(form.value).subscribe(
+      res => {
+        this.userService.setToken(res["token"]);
+        this.role = this.userService.getUserPayload().role;
+        if (this.role == "nurse") {
+          this.router.navigateByUrl("/nurse");
+        } else if (this.role == "patient") {
+          this.router.navigateByUrl("/patient");
+        }
+      },
+      err => {
+        if (err.status === 422) {
+          this.serverErrorMessages = err.error.join("\n");
+        }
+      }
+    );
   }
-
 }
-
-
