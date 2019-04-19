@@ -4,6 +4,7 @@ import { NgModule } from "@angular/core";
 import { AppRoutingModule } from "./app-routing.module";
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
+import { NgxYoutubePlayerModule } from "ngx-youtube-player";
 
 //Components
 import { AppComponent } from "./app.component";
@@ -25,6 +26,7 @@ import {
 import { AuthGuard } from "./auth/auth.guard";
 import { AuthInterceptor } from "./auth/auth.interceptor";
 import { UserService } from "./services/user.service";
+import { VideosComponent } from "./pages/videos/videos.component";
 
 @NgModule({
   declarations: [
@@ -35,14 +37,16 @@ import { UserService } from "./services/user.service";
     FooterComponent,
     SignupComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    VideosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    FlashMessagesModule
+    FlashMessagesModule,
+    NgxYoutubePlayerModule.forRoot()
   ],
   providers: [
     FlashMessagesService,

@@ -29,6 +29,7 @@ export class AuthGuard implements CanActivate {
       this.userService.getLoggedInStatus.emit("Inactive");
       return false;
     }
+    this.userService.getLoggedInStatus.emit("Active");
     return true;
   }
 }

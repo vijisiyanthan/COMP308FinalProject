@@ -6,6 +6,7 @@ import { NurseComponent } from "./pages/nurse/nurse.component";
 import { LoginComponent } from "./pages/login/login.component";
 import { SignupComponent } from "./pages/signup/signup.component";
 import { PatientComponent } from "./pages/patient/patient.component";
+import { VideosComponent } from "./pages/videos/videos.component";
 
 import { AuthGuard } from "./auth/auth.guard";
 
@@ -19,6 +20,12 @@ const routes: Routes = [
   },
   { path: "login", component: LoginComponent, data: { title: "Login" } },
   { path: "signup", component: SignupComponent, data: { title: "Sign Up" } },
+  {
+    path: "videos",
+    component: VideosComponent,
+    data: { title: "Videos", expectedRole: "patient" },
+    canActivate: [AuthGuard]
+  },
   {
     path: "patient",
     component: PatientComponent,
