@@ -22,6 +22,7 @@ router.get('/nurse/clinic', ctrlClinic.list)
 router.get('/nurse/clinic/:id', ctrlClinic.getClinicbyId)
 router.post('/nurse/clinic/:id', ctrlClinic.updateClinic)
 router.delete('/nurse/clinic/:id', ctrlClinic.deleteClinic)
+router.get('/nurse/clinic/patient/:id', ctrlClinic.getClinicbyPatientId)
 
 //Daily Info Routes
 //--Patient Role
