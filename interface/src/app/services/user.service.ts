@@ -4,6 +4,8 @@ import { Observable, Subject } from "rxjs";
 
 import { environment } from "../../environments/environment";
 
+import { User } from "../models/user";
+
 @Injectable({
   providedIn: "root"
 })
@@ -40,6 +42,16 @@ export class UserService {
     );
   }
 
+  //Post User
+  postUser(user: User) {
+    return this.http.post(
+      environment.apiBaseUrl + "/register",
+      user,
+      this.noAuthHeader
+    );
+  }
+
+  //Token
   setToken(token: string) {
     localStorage.setItem("token", token);
   }
