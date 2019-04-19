@@ -17,15 +17,21 @@
       </ng-container>
       <ng-container *ngIf="userRole=='Nurse'">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/nurse"><i class="fa fa-lg fa-phone"></i> Nurse (Test only)</a>
+          <a class="nav-link" routerLink="/nurse"><i class="fa fa-lg fa-user-nurse"></i> Nurse Account</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/nurse-tips"><i class="fa fa-lg fa-phone"></i> Nurse (Test only)</a>
+          <a class="nav-link" routerLink="/nurse-tips"><i class="fa fa-lg fa-comments"></i> Patient Tips</a>
         </li>
       </ng-container>
       <ng-container *ngIf="userRole=='Patient'">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/videos"><i class="fa fa-lg fa-phone"></i> Motivational Videos</a>
+          <a class="nav-link" routerLink="/videos"><i class="fa fa-lg fa-video"></i> Motivational Videos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/patient-tips"><i class="fa fa-lg fa-comments"></i> Tips</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/patient-daily"><i class="fa fa-lg fa-clipboard"></i> Daily Info</a>
         </li>
       </ng-container>
       <ng-container *ngIf="userStatus=='Inactive'">

@@ -30,9 +30,9 @@ export class AuthGuard implements CanActivate {
       this.userService.getLoggedInRole.emit("User");
       return false;
     } else {
-      if (route.data.expectedRole == "Nurse") {
+      if (route.data.expectedRole == "nurse") {
         this.userService.getLoggedInRole.emit("Nurse");
-      } else if (route.data.expectedRole == "Patient") {
+      } else if (route.data.expectedRole == "patient") {
         this.userService.getLoggedInRole.emit("Patient");
       }
       this.userService.getLoggedInStatus.emit("Active");
