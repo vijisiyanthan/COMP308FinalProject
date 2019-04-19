@@ -17,7 +17,6 @@ export class VideosComponent {
 
   constructor() {
     this.videos = videos;
-    console.log(videos);
   }
   onStateChange(event) {
     this.ytEvent = event.data;
