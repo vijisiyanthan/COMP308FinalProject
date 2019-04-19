@@ -1,6 +1,6 @@
-import { Injectable } from "@angular/core";
+import { Injectable, EventEmitter } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { Observable } from "rxjs";
+import { Observable, Subject } from "rxjs";
 
 import { environment } from "../../environments/environment";
 
@@ -8,6 +8,7 @@ import { environment } from "../../environments/environment";
   providedIn: "root"
 })
 export class UserService {
+  public getLoggedInStatus: EventEmitter<any> = new EventEmitter();
   private endpoint = "http://localhost:3000/api/nurse/patients";
 
   private httpOptions = {

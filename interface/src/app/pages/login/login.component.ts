@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
     this.userService.login(form.value).subscribe(
       res => {
         this.userService.setToken(res["token"]);
+        this.userService.getLoggedInStatus.emit("Active");
         this.role = this.userService.getUserPayload().role;
         if (this.role == "nurse") {
           this.router.navigateByUrl("/nurse");
