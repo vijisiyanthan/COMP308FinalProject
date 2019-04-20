@@ -8,6 +8,7 @@ import { SignupComponent } from "./pages/signup/signup.component";
 import { VideosComponent } from "./pages/videos/videos.component";
 import { TipsComponent } from "./pages/tips/tips.component";
 import { DailyInfoComponent } from "./pages/daily-info/daily-info.component";
+import { DailyInfoUpdateComponent } from "./pages/daily-info/daily-info-update/daily-info-update.component";
 import { PatientTipsComponent } from "./pages/tips/patient-tips/patient-tips.component";
 import { PatientDetailsComponent } from "./pages/patient/patient-details/patient-details.component";
 import { PatientClinicUpdateComponent } from "./pages/patient/patient-clinic-update/patient-clinic-update.component";
@@ -39,6 +40,12 @@ const routes: Routes = [
   {
     path: "patient-daily",
     component: DailyInfoComponent,
+    data: { title: "Patients", expectedRole: "patient" },
+    canActivate: [AuthGuard]
+  },
+  {
+    path: "patient-daily-update",
+    component: DailyInfoUpdateComponent,
     data: { title: "Patients", expectedRole: "patient" },
     canActivate: [AuthGuard]
   },

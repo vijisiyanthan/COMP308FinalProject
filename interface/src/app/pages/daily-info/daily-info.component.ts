@@ -41,9 +41,8 @@ export class DailyInfoComponent implements OnInit {
       this.displayDailyInfo();
     }
   }
-
-  onEdit(clinicId: string) {
-    localStorage.setItem("clinicId", clinicId);
-    this.router.navigateByUrl("/patient-clinic-update/" + this.patientId);
+  onEdit(infoId: string) {
+    localStorage.setItem("infoId", infoId);
+    this.router.navigateByUrl("/patient-daily-update");
   }
 }

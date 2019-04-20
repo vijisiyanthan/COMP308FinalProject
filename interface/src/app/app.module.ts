@@ -30,6 +30,7 @@ import { VideosComponent } from "./pages/videos/videos.component";
 import { TipsComponent } from './pages/tips/tips.component';
 import { PatientTipsComponent } from './pages/tips/patient-tips/patient-tips.component';
 import { DailyInfoComponent } from './pages/daily-info/daily-info.component';
+import { DailyInfoUpdateComponent } from './pages/daily-info/daily-info-update/daily-info-update.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { DailyInfoComponent } from './pages/daily-info/daily-info.component';
     PatientClinicUpdateComponent,
     TipsComponent,
     PatientTipsComponent,
-    DailyInfoComponent
+    DailyInfoComponent,
+    DailyInfoUpdateComponent
   ],
   imports: [
     BrowserModule,
