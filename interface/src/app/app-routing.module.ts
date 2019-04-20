@@ -6,6 +6,7 @@ import { NurseComponent } from "./pages/nurse/nurse.component";
 import { LoginComponent } from "./pages/login/login.component";
 import { SignupComponent } from "./pages/signup/signup.component";
 import { VideosComponent } from "./pages/videos/videos.component";
+import { TipsComponent } from "./pages/tips/tips.component";
 import { PatientDetailsComponent } from "./pages/patient/patient-details/patient-details.component";
 import { PatientClinicUpdateComponent } from "./pages/patient/patient-clinic-update/patient-clinic-update.component";
 
@@ -42,6 +43,12 @@ const routes: Routes = [
   {
     path: "patient-clinic-update/:_id",
     component: PatientClinicUpdateComponent,
+    data: { title: "Nurse Account", expectedRole: "nurse" },
+    canActivate: [AuthGuard]
+  },
+  {
+    path: "nurse/tips/:_id",
+    component: TipsComponent,
     data: { title: "Nurse Account", expectedRole: "nurse" },
     canActivate: [AuthGuard]
   },

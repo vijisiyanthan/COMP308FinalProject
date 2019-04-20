@@ -27,6 +27,7 @@ import { AuthGuard } from "./auth/auth.guard";
 import { AuthInterceptor } from "./auth/auth.interceptor";
 import { UserService } from "./services/user.service";
 import { VideosComponent } from "./pages/videos/videos.component";
+import { TipsComponent } from './pages/tips/tips.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { VideosComponent } from "./pages/videos/videos.component";
     HomeComponent,
     VideosComponent,
     PatientDetailsComponent,
-    PatientClinicUpdateComponent
+    PatientClinicUpdateComponent,
+    TipsComponent
   ],
   imports: [
     BrowserModule,
