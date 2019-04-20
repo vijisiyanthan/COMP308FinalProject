@@ -26,8 +26,8 @@ export class PatientDetailsComponent implements OnInit {
     //Get _id from params in order to get clinic data
     this.route.params.subscribe(params => {
       this.patientId = params._id;
+      this.displayClinic();
     });
-    this.displayClinic();
   }
 
   displayClinic(): void {
