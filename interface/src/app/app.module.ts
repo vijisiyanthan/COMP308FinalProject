@@ -29,6 +29,7 @@ import { UserService } from "./services/user.service";
 import { VideosComponent } from "./pages/videos/videos.component";
 import { TipsComponent } from './pages/tips/tips.component';
 import { PatientTipsComponent } from './pages/tips/patient-tips/patient-tips.component';
+import { DailyInfoComponent } from './pages/daily-info/daily-info.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { PatientTipsComponent } from './pages/tips/patient-tips/patient-tips.com
     PatientDetailsComponent,
     PatientClinicUpdateComponent,
     TipsComponent,
-    PatientTipsComponent
+    PatientTipsComponent,
+    DailyInfoComponent
   ],
   imports: [
     BrowserModule,

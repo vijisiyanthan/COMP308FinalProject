@@ -9,19 +9,6 @@ import { environment } from "src/environments/environment";
   providedIn: "root"
 })
 export class ClinicService {
-  private endpointForListAll = "http://localhost:3000/api/nurse/clinic";
-  private endpoint = "http://localhost:3000/api/nurse/clinic/patient/";
-  private endpointForDelete = "http://localhost:3000/api/nurse/clinic/delete/";
-
-  private httpOptions = {
-    headers: new HttpHeaders({
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Headers":
-        "Origin, X-Requested-With, Content-Type, Accept"
-    })
-  };
-
   constructor(private http: HttpClient) {}
 
   //method to get list of clinic
