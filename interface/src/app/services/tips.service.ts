@@ -11,11 +11,7 @@ import { environment } from "src/environments/environment";
 export class TipsService {
   constructor(private http: HttpClient) {}
 
-  public getListAll(): Observable<any> {
-    return this.http.get(environment.apiBaseUrl + "/patient/daily");
-  }
-
-  public getList(): Observable<any> {
+  public getTips(): Observable<any> {
     return this.http.get(environment.apiBaseUrl + "/patient/tips");
   }
 

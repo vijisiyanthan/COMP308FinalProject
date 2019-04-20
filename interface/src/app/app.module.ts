@@ -28,6 +28,7 @@ import { AuthInterceptor } from "./auth/auth.interceptor";
 import { UserService } from "./services/user.service";
 import { VideosComponent } from "./pages/videos/videos.component";
 import { TipsComponent } from './pages/tips/tips.component';
+import { PatientTipsComponent } from './pages/tips/patient-tips/patient-tips.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { TipsComponent } from './pages/tips/tips.component';
     VideosComponent,
     PatientDetailsComponent,
     PatientClinicUpdateComponent,
-    TipsComponent
+    TipsComponent,
+    PatientTipsComponent
   ],
   imports: [
     BrowserModule,

@@ -3,4 +3,5 @@ export class Tips {
   content: String;
   patient: String;
   nurse: String;
+  recorded: Date;
 }
