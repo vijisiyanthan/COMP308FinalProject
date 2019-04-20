@@ -6,7 +6,6 @@ import { NurseComponent } from "./pages/nurse/nurse.component";
 import { LoginComponent } from "./pages/login/login.component";
 import { SignupComponent } from "./pages/signup/signup.component";
 import { VideosComponent } from "./pages/videos/videos.component";
-import { PatientClinicListComponent } from "./pages/patient/patient-clinic-list/patient-clinic-list.component";
 import { PatientDetailsComponent } from "./pages/patient/patient-details/patient-details.component";
 import { PatientClinicUpdateComponent } from "./pages/patient/patient-clinic-update/patient-clinic-update.component";
 
@@ -29,18 +28,6 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: "patient-clinic-list",
-    component: PatientClinicListComponent,
-    data: { title: "Nurse Account", expectedRole: "nurse" },
-    canActivate: [AuthGuard]
-  },
-  {
-    path: "patient-clinic-list/:id",
-    component: PatientClinicListComponent,
-    data: { title: "Nurse Account", expectedRole: "nurse" },
-    canActivate: [AuthGuard]
-  },
-  {
     path: "patient-details",
     component: PatientDetailsComponent,
     data: { title: "Nurse Account", expectedRole: "nurse" },
@@ -53,7 +40,7 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: "patient-clinic-update",
+    path: "patient-clinic-update/:_id",
     component: PatientClinicUpdateComponent,
     data: { title: "Nurse Account", expectedRole: "nurse" },
     canActivate: [AuthGuard]

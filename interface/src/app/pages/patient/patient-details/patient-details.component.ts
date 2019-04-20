@@ -1,8 +1,9 @@
 import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { Clinic } from "../../../models/clinic";
 import { ClinicService } from "src/app/services/clinic.service";
 import { User } from "../../../models/user";
+import { NgForm } from "@angular/forms";
 
 @Component({
   selector: "app-patient-details",
@@ -11,30 +12,40 @@ import { User } from "../../../models/user";
 })
 export class PatientDetailsComponent implements OnInit {
   clinicDetails: Array<Clinic>;
-  _id: User;
+  patientId: string;
 
   //title: String;
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private clinicService: ClinicService
   ) {}
 
   ngOnInit() {
-    //this.title = this.route.snapshot.data.title;
-
     //Get _id from params in order to get clinic data
     this.route.params.subscribe(params => {
-      this._id = params._id;
+      this.patientId = params._id;
     });
-
     this.displayClinic();
   }
 
   displayClinic(): void {
-    this.clinicService.getList(this._id).subscribe(data => {
+    this.clinicService.getList(this.patientId).subscribe(data => {
       //console.log(data);
       this.clinicDetails = data;
     });
+  }
+
+  onDelete(_id: string) {
+    if (confirm("Are you sure to delete this record ?") == true) {
+      this.clinicService.deleteList(_id).subscribe(res => {});
+      this.displayClinic();
+    }
+  }
+
+  onEdit(clinicId: string) {
+    localStorage.setItem("clinicId", clinicId);
+    this.router.navigateByUrl("/patient-clinic-update/" + this.patientId);
   }
 }

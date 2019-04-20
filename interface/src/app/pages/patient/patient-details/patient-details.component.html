@@ -5,7 +5,7 @@
         <h2 class="display-4 font-weight-bold">Patient's Details</h2>
         <hr class="hr-light">
 
-        <a class="btn btn-primary" routerLink="/patient-clinic-update" role="button">
+        <a class="btn btn-primary" routerLink="/patient-clinic-update/{{patientId}}" role="button">
           <i class="fas fa-plus-circle"></i>Add record
         </a>
         <div class="row">
@@ -63,11 +63,10 @@
 
                 <td class="text-center">{{ clinic.nurse }}</td>
                 <td class="text-center">
-                  <a routerLink="/patient-clinic-update" class="btn btn-info"><i class="fas fa-pencil-alt"></i> Edit</a>
+                  <a (click)="onEdit(clinic._id)" class="btn btn-info"><i class="fas fa-pencil-alt"></i> Edit</a>
                 </td>
                 <td class="text-center">
-                  <a routerLink="/patient-clinic-list/{{ clinic._id }}" class="btn btn-danger"><i
-                      class="fas fa-pencil-alt"></i> Delete</a>
+                  <a (click)="onDelete(clinic._id)" class="btn btn-danger"><i class="fas fa-pencil-alt"></i> Delete</a>
                 </td>
               </tr>
             </table>

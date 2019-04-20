@@ -14,16 +14,14 @@ import { FooterComponent } from "./partials/footer/footer.component";
 import { SignupComponent } from "./pages/signup/signup.component";
 import { LoginComponent } from "./pages/login/login.component";
 import { HomeComponent } from "./pages/home/home.component";
-import { PatientDetailsComponent } from './pages/patient/patient-details/patient-details.component';
-import { PatientClinicUpdateComponent } from './pages/patient/patient-clinic-update/patient-clinic-update.component';
-
+import { PatientDetailsComponent } from "./pages/patient/patient-details/patient-details.component";
+import { PatientClinicUpdateComponent } from "./pages/patient/patient-clinic-update/patient-clinic-update.component";
 
 //Services
 import {
   FlashMessagesModule,
   FlashMessagesService
 } from "angular2-flash-messages";
-import { PatientClinicListComponent } from './pages/patient/patient-clinic-list/patient-clinic-list.component';
 //Authorization
 import { AuthGuard } from "./auth/auth.guard";
 import { AuthInterceptor } from "./auth/auth.interceptor";
@@ -41,8 +39,7 @@ import { VideosComponent } from "./pages/videos/videos.component";
     HomeComponent,
     VideosComponent,
     PatientDetailsComponent,
-    PatientClinicUpdateComponent,
-    PatientClinicListComponent,
+    PatientClinicUpdateComponent
   ],
   imports: [
     BrowserModule,
